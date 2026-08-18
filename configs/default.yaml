@@ -1,0 +1,23 @@
+project:
+  name: "REACT-RAG"
+  version: "0.1.0"
+
+environment:
+  python: "3.12"
+
+retrieval:
+  top_k: 10
+  embedding_model: "BAAI/bge-small-en-v1.5"
+
+generation:
+  temperature: 0.0
+
+evidence:
+  support_threshold: 0.70
+  contradiction_threshold: 0.70
+
+reliability:
+  initial_threshold: 0.70
+
+evaluation:
+  seed: 42

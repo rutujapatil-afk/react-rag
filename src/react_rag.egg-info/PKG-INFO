@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: react-rag
+Version: 0.1.0
+Summary: Reliability-Aware Retrieval-Augmented Generation
+Requires-Python: <3.13,>=3.12
