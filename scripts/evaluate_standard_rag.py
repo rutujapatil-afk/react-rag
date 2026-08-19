@@ -19,7 +19,7 @@ VALIDATION_PATH = "data/raw/hotpotqa/validation.json"
 EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
 LLM_MODEL = "qwen2.5:3b"
 
-NUM_EXAMPLES = 100
+NUM_EXAMPLES = 5
 TOP_K = 5
 
 OUTPUT_PATH = Path(

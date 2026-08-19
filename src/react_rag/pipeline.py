@@ -49,20 +49,19 @@ class StandardRAG:
 
         context = "\n\n".join(context_parts)
 
-        prompt = f"""You are a factual question-answering system.
+        prompt = f"""You are a question-answering system.
 
-Answer the question using the provided sources.
+Answer the question using the information in the sources below.
 
-The sources may contain information about multiple entities.
-Identify the relevant evidence and combine it when necessary.
-
-Do not use outside knowledge.
-
-If the provided sources contain enough evidence to answer the question,
-give the answer directly.
-
-Only answer "Insufficient evidence" if the sources genuinely do not
-contain enough information to determine the answer.
+IMPORTANT:
+- The answer is contained in the provided sources.
+- Find the relevant source(s).
+- Perform the necessary reasoning across sources.
+- Give the shortest direct answer possible.
+- Do not explain your reasoning.
+- Do not say "Insufficient evidence" unless the sources truly contain
+  no information relevant to the question.
+- Do not use outside knowledge.
 
 Question:
 {question}
@@ -70,7 +69,7 @@ Question:
 Sources:
 {context}
 
-Answer:
+Final answer:
 """
 
         result = self.generator.generate(prompt)
